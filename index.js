@@ -25,10 +25,14 @@ const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
 
 //createFareMultiplier() — This is a higher-order function that takes in one argument, an integer, and returns a function that will multiply a fare for a ride accordingly. If createFareMultiplier() receives an argument of 4, it will return a function that
 //takes in a fare as an argument and quadruples the fare.
-//returns a function 
+//returns a function
 const createFareMultiplier = function (multiplier) {
   return function (fare) {
   return multiplier * fare;
  };
 };
 
+//fareDoubler() — Declare a variable with const and assign a function returned by createFareMultiplier() to it. Invoke createFareMultiplier() in such a way that the new fareDoubler() function 
+//accepts a fare as its lone argument and doubles it.
+//doubles fares 
+const fareDoubler = createFareMultiplier(2);
